@@ -11,7 +11,37 @@
 		EBEE71122B34388B00D49B8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71112B34388B00D49B8C /* ContentView.swift */; };
 		EBEE71142B34388E00D49B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEE71132B34388E00D49B8C /* Assets.xcassets */; };
 		EBEE71172B34388E00D49B8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEE71162B34388E00D49B8C /* Preview Assets.xcassets */; };
+		EBEE71252B34391F00D49B8C /* DemoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71242B34391F00D49B8C /* DemoServiceProtocol.swift */; };
+		EBEE71272B34391F00D49B8C /* DemoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71262B34391F00D49B8C /* DemoService.swift */; };
+		EBEE71292B34391F00D49B8C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71282B34391F00D49B8C /* main.swift */; };
+		EBEE712E2B34391F00D49B8C /* DemoService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = EBEE71222B34391F00D49B8C /* DemoService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EBEE71342B44446200D49B8C /* XPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71332B44446200D49B8C /* XPCClient.swift */; };
+		EBEE71352B4451B900D49B8C /* DemoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71242B34391F00D49B8C /* DemoServiceProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBEE712C2B34391F00D49B8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEE71042B34388B00D49B8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBEE71212B34391F00D49B8C;
+			remoteInfo = DemoService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBEE71322B34391F00D49B8C /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				EBEE712E2B34391F00D49B8C /* DemoService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EBEE710C2B34388B00D49B8C /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +50,24 @@
 		EBEE71132B34388E00D49B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBEE71162B34388E00D49B8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBEE71182B34388E00D49B8C /* DemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoApp.entitlements; sourceTree = "<group>"; };
+		EBEE71222B34391F00D49B8C /* DemoService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = DemoService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEE71242B34391F00D49B8C /* DemoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoServiceProtocol.swift; sourceTree = "<group>"; };
+		EBEE71262B34391F00D49B8C /* DemoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoService.swift; sourceTree = "<group>"; };
+		EBEE71282B34391F00D49B8C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EBEE712A2B34391F00D49B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBEE712B2B34391F00D49B8C /* DemoService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoService.entitlements; sourceTree = "<group>"; };
+		EBEE71332B44446200D49B8C /* XPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EBEE71092B34388B00D49B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE711F2B34391F00D49B8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				EBEE710E2B34388B00D49B8C /* DemoApp */,
+				EBEE71232B34391F00D49B8C /* DemoService */,
 				EBEE710D2B34388B00D49B8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				EBEE710C2B34388B00D49B8C /* DemoApp.app */,
+				EBEE71222B34391F00D49B8C /* DemoService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +103,7 @@
 				EBEE71132B34388E00D49B8C /* Assets.xcassets */,
 				EBEE71182B34388E00D49B8C /* DemoApp.entitlements */,
 				EBEE71152B34388E00D49B8C /* Preview Content */,
+				EBEE71332B44446200D49B8C /* XPCClient.swift */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -69,6 +116,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EBEE71232B34391F00D49B8C /* DemoService */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE71242B34391F00D49B8C /* DemoServiceProtocol.swift */,
+				EBEE71262B34391F00D49B8C /* DemoService.swift */,
+				EBEE71282B34391F00D49B8C /* main.swift */,
+				EBEE712A2B34391F00D49B8C /* Info.plist */,
+				EBEE712B2B34391F00D49B8C /* DemoService.entitlements */,
+			);
+			path = DemoService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +138,34 @@
 				EBEE71082B34388B00D49B8C /* Sources */,
 				EBEE71092B34388B00D49B8C /* Frameworks */,
 				EBEE710A2B34388B00D49B8C /* Resources */,
+				EBEE71322B34391F00D49B8C /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBEE712D2B34391F00D49B8C /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			productName = DemoApp;
 			productReference = EBEE710C2B34388B00D49B8C /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EBEE71212B34391F00D49B8C /* DemoService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEE712F2B34391F00D49B8C /* Build configuration list for PBXNativeTarget "DemoService" */;
+			buildPhases = (
+				EBEE711E2B34391F00D49B8C /* Sources */,
+				EBEE711F2B34391F00D49B8C /* Frameworks */,
+				EBEE71202B34391F00D49B8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoService;
+			productName = DemoService;
+			productReference = EBEE71222B34391F00D49B8C /* DemoService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +178,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					EBEE710B2B34388B00D49B8C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EBEE71212B34391F00D49B8C = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -118,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				EBEE710B2B34388B00D49B8C /* DemoApp */,
+				EBEE71212B34391F00D49B8C /* DemoService */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBEE71202B34391F00D49B8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +228,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEE71352B4451B900D49B8C /* DemoServiceProtocol.swift in Sources */,
+				EBEE71342B44446200D49B8C /* XPCClient.swift in Sources */,
 				EBEE71122B34388B00D49B8C /* ContentView.swift in Sources */,
 				EBEE71102B34388B00D49B8C /* DemoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBEE711E2B34391F00D49B8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEE71272B34391F00D49B8C /* DemoService.swift in Sources */,
+				EBEE71252B34391F00D49B8C /* DemoServiceProtocol.swift in Sources */,
+				EBEE71292B34391F00D49B8C /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBEE712D2B34391F00D49B8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBEE71212B34391F00D49B8C /* DemoService */;
+			targetProxy = EBEE712C2B34391F00D49B8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EBEE71192B34388E00D49B8C /* Debug */ = {
@@ -263,6 +372,7 @@
 		EBEE711C2B34388E00D49B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DemoApp/DemoApp.entitlements;
@@ -288,6 +398,7 @@
 		EBEE711D2B34388E00D49B8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DemoApp/DemoApp.entitlements;
@@ -310,6 +421,46 @@
 			};
 			name = Release;
 		};
+		EBEE71302B34391F00D49B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DemoService/DemoService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.DemoService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EBEE71312B34391F00D49B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DemoService/DemoService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.DemoService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +478,15 @@
 			buildConfigurations = (
 				EBEE711C2B34388E00D49B8C /* Debug */,
 				EBEE711D2B34388E00D49B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEE712F2B34391F00D49B8C /* Build configuration list for PBXNativeTarget "DemoService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEE71302B34391F00D49B8C /* Debug */,
+				EBEE71312B34391F00D49B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
