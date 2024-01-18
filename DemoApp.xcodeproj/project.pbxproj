@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB06F13C2B5929920092D19D /* AuditToken.m in Sources */ = {isa = PBXBuildFile; fileRef = EB06F13B2B5929920092D19D /* AuditToken.m */; };
 		EBEE71102B34388B00D49B8C /* DemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE710F2B34388B00D49B8C /* DemoAppApp.swift */; };
 		EBEE71122B34388B00D49B8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE71112B34388B00D49B8C /* ContentView.swift */; };
 		EBEE71142B34388E00D49B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEE71132B34388E00D49B8C /* Assets.xcassets */; };
@@ -44,6 +45,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB06F1392B5929560092D19D /* AuditToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuditToken.h; sourceTree = "<group>"; };
+		EB06F13A2B5929910092D19D /* DemoService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoService-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB06F13B2B5929920092D19D /* AuditToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuditToken.m; sourceTree = "<group>"; };
 		EBEE710C2B34388B00D49B8C /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEE710F2B34388B00D49B8C /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
 		EBEE71112B34388B00D49B8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				EBEE710E2B34388B00D49B8C /* DemoApp */,
 				EBEE71232B34391F00D49B8C /* DemoService */,
 				EBEE710D2B34388B00D49B8C /* Products */,
+				EB06F13A2B5929910092D19D /* DemoService-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +129,8 @@
 				EBEE71282B34391F00D49B8C /* main.swift */,
 				EBEE712A2B34391F00D49B8C /* Info.plist */,
 				EBEE712B2B34391F00D49B8C /* DemoService.entitlements */,
+				EB06F13B2B5929920092D19D /* AuditToken.m */,
+				EB06F1392B5929560092D19D /* AuditToken.h */,
 			);
 			path = DemoService;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 					};
 					EBEE71212B34391F00D49B8C = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -242,6 +250,7 @@
 				EBEE71272B34391F00D49B8C /* DemoService.swift in Sources */,
 				EBEE71252B34391F00D49B8C /* DemoServiceProtocol.swift in Sources */,
 				EBEE71292B34391F00D49B8C /* main.swift in Sources */,
+				EB06F13C2B5929920092D19D /* AuditToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +389,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -406,6 +416,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -424,10 +435,12 @@
 		EBEE71302B34391F00D49B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DemoService/DemoService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DemoService;
@@ -437,6 +450,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoService-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -444,10 +459,12 @@
 		EBEE71312B34391F00D49B8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DemoService/DemoService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DemoService;
@@ -457,6 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoService-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
